@@ -35,6 +35,9 @@ export default function Home() {
             priority
           />
           <ol>
+          <li>
+            PAGES ROUNTER
+            </li>
             <li>
               Get started by editing <code>pages/index.tsx</code>.
             </li>
