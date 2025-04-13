@@ -6,9 +6,9 @@ const PropertyList: NextPage = () => {
   
 
   return (
-    <>
-      <Container>PROPERTY List</Container>
-    </>
+    <div style={{margin:"20px 0"}}>
+      <Stack className="container">PROPERTY List</Stack>
+    </div>
   );
 };
 export default withLayoutBasic(PropertyList);
