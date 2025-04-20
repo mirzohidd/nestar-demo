@@ -1,14 +1,18 @@
 import withLayoutBasic from "@/libs/components/layout/LayoutBasic";
 import { Box, Container, Stack } from "@mui/material";
 import { NextPage } from "next";
-
+import useDeviceDetect from "@/libs/hooks/useDeviceDetect";
 const AgentList: NextPage = () => {
-  console.log("Community page");
-  return (
-    <div style={{margin:"20px 0"}}>
-      <Stack className="container">AgentList</Stack>
-    </div>
-  );
+  const device = useDeviceDetect();
+  if (device === "mobile") {
+    return <Stack>AGENTS MOBILE</Stack>;
+  } else {
+    return (
+      <div style={{ marginTop: "20px 0" }}>
+        <Stack className={"container"}>AGENTS LIST</Stack>
+      </div>
+    );
+  }
 };
 
 export default withLayoutBasic(AgentList);
